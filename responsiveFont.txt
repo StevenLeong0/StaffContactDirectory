@@ -1,0 +1,31 @@
+import { Dimensions, PixelRatio } from 'react-native';
+
+// const width = Dimensions.get('window').width;
+// const height = Dimensions.get('window').height;
+
+
+// const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
+// const SCALE = SCREEN_WIDTH > SCREEN_HEIGHT ? SCREEN_HEIGHT : SCREEN_WIDTH;
+const BASE_WIDTH = 375;
+
+const windowDimensions = Dimensions.get('window');
+const screenDimensions = Dimensions.get('screen');
+export default fontChanging(){
+    const[dimensions,setDimensions] = useState({
+        window:windowDimensions,
+        screen: screenDimensions,
+    });
+    //tracks changes in screen or window
+    useEffect(()=>{
+        const subscription = Dimensions.addEventListener(
+            'change',
+            ({window, screen})=>
+        )
+    })
+}
+
+
+
+function responsiveFont({children}){
+  return (<responsiveText><Text style={{}}>{children}</Text></responsiveText>)
+}
